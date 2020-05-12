@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- 返回按钮 -->
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>新建备忘录</ion-title>
+
+    <!-- 确定按钮 -->
+    <ion-buttons slot="end">
+      <ion-back-button icon="checkmark-outline" (click)="newNote()"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- 输入笔记的标题 -->
+  <ion-item>
+    <ion-label position="floating">标题</ion-label>
+    <ion-textarea [rows]=[1] [(ngModel)]="title"></ion-textarea>
+  </ion-item>
+
+   <!-- 输入笔记内容 -->
+   <ion-item >
+    <ion-textarea placeholder="请输入内容" [rows]=[20] [(ngModel)]="content"></ion-textarea>
+  </ion-item>
+
+</ion-content>
